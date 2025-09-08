@@ -43,8 +43,15 @@ export const DayColumn: React.FC<DayColumnProps> = ({
     if (newTodoText.trim()) {
       onAdd(newTodoText.trim(), day);
       setNewTodoText("");
+
+      if (emptySpaces.length > 1) {
+        setEditingLine(emptySpaces[0]);
+      } else {
+        setEditingLine(null);
+      }
+    } else {
+      setEditingLine(null);
     }
-    setEditingLine(null);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
