@@ -1,10 +1,10 @@
-import { useState } from "react";
 import { useDroppable } from "@dnd-kit/core";
 import {
   SortableContext,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
-import type { Todo, DayOfWeek } from "../types";
+import { useState } from "react";
+import type { DayOfWeek, Todo } from "../types";
 import { SortableTodoItem } from "./SortableTodoItem";
 
 interface DayColumnProps {
